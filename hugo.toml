@@ -1,0 +1,49 @@
+baseURL       = 'https://jmooring.github.io/hosting-github-pages-25000-pages/'
+languageCode  = 'en-US'
+title         = 'Hosting Test - GitHub Pages - 25,000 Pages'
+enableGitInfo = true
+disableKinds = ['rss','sitemap']
+
+# -----------------------------------------------------------------------------
+# Caches
+# -----------------------------------------------------------------------------
+
+[caches.images]
+  dir = ':cacheDir/images'
+
+# -----------------------------------------------------------------------------
+# Markup
+# -----------------------------------------------------------------------------
+
+[markup.goldmark.renderHooks.image]
+useEmbedded = 'always'
+
+[markup.goldmark.renderHooks.link]
+useEmbedded = 'always'
+
+# -----------------------------------------------------------------------------
+# Menus
+# -----------------------------------------------------------------------------
+
+[[menus.main]]
+  name    = 'Home'
+  pageRef = '/'
+  weight  = 10
+
+[[menus.main]]
+  name    = 'Posts'
+  pageRef = '/posts'
+  weight  = 20
+
+[[menus.main]]
+  name    = 'Tags'
+  pageRef = '/tags'
+  weight  = 30
+
+# -----------------------------------------------------------------------------
+# Module
+# -----------------------------------------------------------------------------
+
+[module.hugoVersion]
+  extended = true
+  min      = '0.150.0'
